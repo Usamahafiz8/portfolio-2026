@@ -288,59 +288,56 @@ section {
 /* ─────────────────────────────────────────────
    HERO
 ───────────────────────────────────────────── */
-.hero-wrap {
-  position: relative; min-height: 100vh;
-  display: flex; align-items: center;
-  overflow: hidden;
+
+   .hero-wrap {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;     /* ← helps with nav overlap + centering */
+  align-items: center;        /* vertical */
+  justify-content: center;    /* ← crucial: horizontal centering */
   padding-top: var(--nav-h);
-}
-.hero-wrap section { padding-top: clamp(2.5rem, 6vw, 4rem); padding-bottom: clamp(2.5rem, 6vw, 4rem); }
-
-.bg-orb {
-  position: absolute; border-radius: 50%;
-  filter: blur(80px); pointer-events: none;
-}
-.orb1 { width: clamp(280px,45vw,500px); height: clamp(280px,45vw,500px); top:-80px; left:-120px; background:radial-gradient(circle,rgba(56,189,248,.09),transparent 70%); animation:orbFloat 8s ease-in-out infinite; }
-.orb2 { width: clamp(220px,35vw,400px); height: clamp(220px,35vw,400px); bottom:0; right:0; background:radial-gradient(circle,rgba(129,140,248,.08),transparent 70%); animation:orbFloat 10s ease-in-out infinite reverse; }
-.orb3 { width: clamp(160px,25vw,300px); height: clamp(160px,25vw,300px); top:40%; left:45%; background:radial-gradient(circle,rgba(52,211,153,.06),transparent 70%); animation:orbFloat 12s ease-in-out infinite; }
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
+  overflow: hidden;
 }
 
-/* hero left */
-.hero-tag {
-  display: inline-flex; align-items: center; gap: .5rem;
-  background: rgba(56,189,248,.08); border: 1px solid rgba(56,189,248,.2);
-  color: var(--accent); font-size: .7rem; letter-spacing: .15em;
-  text-transform: uppercase; padding: .35rem .9rem; border-radius: 2rem;
-  margin-bottom: 1.5rem;
-  animation: fadeUp .8s .2s both;
+/* Make sure the section behaves like a centered content wrapper */
+.hero-wrap section {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;             /* ← fallback centering */
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+  padding-bottom: clamp(2.5rem, 6vw, 4rem);
+  display: flex;              /* ← optional but helpful */
+  justify-content: center;
 }
-.hero-tag::before { content: '◆'; font-size: .5rem; }
 
-.hero-name {
-  font-family: 'Fraunces', serif; font-weight: 700;
-  font-size: clamp(2.2rem, 6vw, 5rem); line-height: 1.05;
-  color: #fff; letter-spacing: -.02em;
-  animation: fadeUp .8s .35s both;
+/* On mobile — make sure text content is centered */
+@media (max-width: 900px) {
+  .hero-grid {
+    width: 100%;
+    max-width: 640px;         /* ← or whatever feels balanced on mobile */
+    margin: 0 auto;
+    justify-items: center;    /* centers grid children horizontally */
+    text-align: center;       /* centers text inside */
+  }
+
+  .hero-cta {
+    justify-content: center;  /* centers buttons on mobile */
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-.hero-name span { color: var(--accent); }
-.hero-title {
-  font-family: 'Syne', sans-serif; font-size: clamp(.8rem, 1.5vw, 1rem);
-  font-weight: 600; color: var(--accent2); letter-spacing: .06em;
-  margin-top: .6rem;
-  animation: fadeUp .8s .45s both;
-}
-.hero-desc {
-  color: var(--muted); font-size: clamp(.82rem, 1.5vw, .9rem);
-  max-width: 500px; margin-top: 1.2rem; line-height: 1.9;
-  animation: fadeUp .8s .55s both;
-}
-.hero-cta {
+
+
+
+   .hero-cta {
   display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem;
   animation: fadeUp .8s .65s both;
 }
