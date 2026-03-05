@@ -4,7 +4,7 @@
 **Tech Lead • System Design • Remote / Hybrid**
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fraunces&weight=700&size=38&duration=4500&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Muhammad+Osama;Senior+Full-Stack+%26+Blockchain+Engineer;6%2B+years+experience" alt="Muhammad Osama typing animation" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fraunces&weight=700&size=38&duration=4500&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Muhammad+Osama;Senior+Full-Stack+Engineer;6%2B+years+experience" alt="Muhammad Osama typing animation" />
 </div>
 
 <br/>
