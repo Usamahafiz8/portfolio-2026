@@ -29,22 +29,9 @@
 
 ## 🌐 Live Portfolio
 
-🔗 **https://muhammad-osama.github.io** (or your actual deployed URL)
+🔗 **https://osama-full-stack-dev.netlify.app** (or your actual deployed URL)
 
 Modern, responsive personal portfolio showcasing 6+ years of experience in full-stack development, blockchain engineering, and technical leadership.
-
-### Features
-
-- Dark cyberpunk aesthetic with subtle noise overlay
-- Custom cursor & scroll progress bar
-- Floating social sidebar (desktop)
-- Animated glitch text effect on name
-- Typing animation in availability tag
-- Scroll reveal animations
-- Responsive mobile menu with drawer
-- Smooth orb float animations in hero
-- Interactive project cards with mouse glow
-- Timeline-style experience section
 
 ---
 
